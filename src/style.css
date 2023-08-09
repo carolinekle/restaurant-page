@@ -2,12 +2,22 @@ body{
     display: flex;
     font-family: Helvetica, sans-serif;
     height: -webkit-fill-available;
-    width: -webkit-fill-available;
+    width: 100vw;
     overflow: scroll;
+    overflow-x: hidden;
     margin:0px;
-    background-color: #ccd2d8;
+    background-color: rgb(252, 246, 238);
+    max-width:100%;
 }
 
+.top{
+    width: 100vw;
+    height: 95vh;
+    display: flex;
+    flex-direction: column;
+    background-image: url(../src/img/farm.jpg);
+    background-position: center center;
+}
 
 .first{
     height:100vh;
@@ -26,11 +36,29 @@ body{
     width:100vw;
     height:3rem;
     padding: 5px;
+    background-color: blanchedalmond;
+}
+
+.subscribe > input{
+    margin-left:1rem;
+}
+
+.subscribe > button{
+    margin-left:1rem;
 }
 
 header{
     font-size: 2rem;
     margin:auto;
+    width: 100vw;
+    height: 95vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-content: stretch;
+    color: antiquewhite;
+    margin-left: 30px;
+    margin-top: 30px;
 }
 
 .res{
@@ -39,6 +67,45 @@ header{
     height: 2.5rem;
     width: 120px;
     align-items: center;
-    align-content: flex-end;
+    align-self: flex-end;
+    justify-items: end;
     justify-content: center;
+    margin-right: 30px;
+    margin-bottom: 30px;
+}
+
+.tabs{
+    height: 800px;
+    width: 600px;
+    background-color: rgb(57, 53, 48);
+    margin: auto;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    color: antiquewhite;
+    text-align: center;
+}
+
+.menu{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    color: antiquewhite;
+    text-align: center;
+}
+
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    height: 20vh;
+    width: 30vw;
+    margin: auto;
 }
