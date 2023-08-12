@@ -55,7 +55,7 @@ body{
     box-shadow: none;
 }
 
-header{
+.name{
     font-size: 5rem;
     margin:auto;
     width: 100vw;
