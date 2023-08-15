@@ -1,23 +1,39 @@
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-module.exports = {
+ module.exports = {
   mode: 'development',
   entry: {
-    index:'./src/index.js',
-/*     site: './src/site.js', */
+    index: './src/index.js',
+    site: './src/site.js',
   },
   devtool: 'inline-source-map',
-  output: {
-    filename: 'main.js',
-    path: path.resolve(__dirname, 'dist'),
-    clean: true,
+  devServer: {
+    static: './dist',
   },
-  module: {
+  plugins: [
+    new HtmlWebpackPlugin({
+      title: 'Output Management',
+    }),
+  ],
+   output: {
+    filename: '[name].bundle.js',
+     path: path.resolve(__dirname, 'dist'),
+     clean: true,
+   },
+   module: {
     rules: [
       {
         test: /\.css$/i,
         use: ['style-loader', 'css-loader'],
       },
+      {
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        type: 'asset/resource',
+      },
     ],
   },
-};
+   optimization: {
+    runtimeChunk: 'single',
+  },
+ };

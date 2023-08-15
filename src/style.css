@@ -159,3 +159,7 @@ footer{
 #aboutUs > p{
     padding: 0px 1rem 0px 1rem;
 }
+
+.hello {
+    color: red;
+  }
