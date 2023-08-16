@@ -1,3 +1,7 @@
+ import createMenu from "./menu" 
+ import createAbout from "./about"
+ import createContact from "./contact"
+
 function createTop(){
     const first = document.createElement("div")
     first.classList.add("first")
@@ -69,7 +73,9 @@ function createTabs(){
 
 function createContent(){
     const contentWrapper = document.createElement("div")
-    contentWrapper.setAttribute("id","content")
+    contentWrapper.id = "content"
+
+    contentWrapper.appendChild(createContact()); 
 
     return contentWrapper
 }
