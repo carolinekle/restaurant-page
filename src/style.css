@@ -160,10 +160,6 @@ footer{
 }
 
 #aboutUs{
-/*     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-content: center; */
     text-align: left;
     line-height: 1.5rem;
     color:#301014;
