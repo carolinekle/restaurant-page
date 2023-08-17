@@ -86,13 +86,18 @@ body{
     color: antiquewhite;
     cursor: pointer;
     padding:2rem 2rem 2rem 2rem;
+    transition: 0.3s;
+}
+
+.res:hover{
+    border:3px solid antiquewhite;
 }
 
 #content{
     height: 800px;
     width: 600px;
     margin: auto;
-    margin-top: 50px;
+    margin-bottom: 50px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -111,7 +116,7 @@ body{
     width: 300px;
 }
 
-.tabButtons > button{
+.nav{
     height: 2rem;
     width: fit-content;
     padding-left: 10px;
@@ -123,6 +128,13 @@ body{
     text-align: center;
     font-size:1rem;
     border-radius: 3px;
+    transition: 0.3s;
+}
+
+.nav:hover{
+    background-color: #303D2D;
+    color: #e8ebe8;
+
 }
 
 .menu{
@@ -148,18 +160,15 @@ footer{
 }
 
 #aboutUs{
-    display: flex;
+/*     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-content: center;
+    align-content: center; */
+    text-align: left;
     line-height: 1.5rem;
-    color:#301014
+    color:#301014;
 }
 
 #aboutUs > p{
-    padding: 0px 1rem 0px 1rem;
+    padding: 0px .5rem 0px .5rem;
 }
-
-.hello {
-    color: red;
-  }

@@ -36,7 +36,7 @@ function createSub(){
     subBox.appendChild(eMail)
 
     const userName = document.createElement("input")
-    eMail.placeholder = "name"
+    userName.placeholder = "name"
     subBox.appendChild(userName)
 
     const subButton = document.createElement("button")
@@ -47,35 +47,48 @@ function createSub(){
     return subBox
 }
 
-function createTabs(){
+function createContent(){
+    const contentWrapper = document.createElement("div")
+    contentWrapper.id = "content"
+
     const tabWrapper = document.createElement("div")
     tabWrapper.classList.add("tabButtons")
 
     const menu = document.createElement("button")
-    menu.classList.add("menu")
+    menu.classList.add("menu", "nav")
     menu.innerText = "menu"
     tabWrapper.appendChild(menu)
     
 
     const aboutUs = document.createElement("button")
-    aboutUs.classList.add("about-us")
+    aboutUs.classList.add("about-us", "nav")
     aboutUs.innerText = "about us"
     tabWrapper.appendChild(aboutUs)
 
     const contact = document.createElement("button")
-    contact.classList.add("contact")
+    contact.classList.add("contact", "nav")
     contact.innerHTML = "contact us"
     tabWrapper.appendChild(contact)
 
-    return tabWrapper
+    document.body.appendChild(tabWrapper)
 
-}
+    contentWrapper.appendChild(createMenu());
 
-function createContent(){
-    const contentWrapper = document.createElement("div")
-    contentWrapper.id = "content"
+    aboutUs.addEventListener("click", () => {
+        contentWrapper.textContent = ""
+        contentWrapper.appendChild(createAbout())
+    })
 
-    contentWrapper.appendChild(createContact()); 
+    contact.addEventListener("click", () => {
+        contentWrapper.textContent = ""
+        contentWrapper.appendChild(createContact())
+    })
+
+    menu.addEventListener("click", () => {
+        contentWrapper.textContent = ""
+        contentWrapper.appendChild(createMenu())
+    })
+    
 
     return contentWrapper
 }
@@ -104,7 +117,7 @@ function createFooter(){
 export default function createSite (){
     document.body.appendChild(createTop())
     document.body.appendChild(createSub())
-    document.body.appendChild(createTabs())
+/*     document.body.appendChild(createTabs()) */
     document.body.appendChild(createContent())
     document.body.appendChild(createFooter())
 
